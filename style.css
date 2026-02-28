@@ -1,0 +1,202 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#analysisLayout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+#boardColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+#blackName,
+#whiteName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 5px 0;
+  margin-left: 34px;
+}
+
+#boardRow {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+#board {
+  width: 400px;
+  height: 400px;
+}
+
+#evalBarCanvas {
+  display: block;
+  background-color: #333;
+  border-radius: 4px;
+  margin-right: 6px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.6);
+}
+
+#sidePanel {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  gap: 10px;
+}
+
+#moveList {
+  background-color: #262626;
+  border-radius: 6px;
+  padding: 6px 4px;
+  overflow-y: auto;
+  max-height: 320px;
+  min-height: 80px;
+}
+
+.moveRow {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.moveRow:hover {
+  background-color: #2e2e2e;
+}
+
+.move {
+  flex: 1;
+  padding: 5px 6px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.88rem;
+  text-align: center;
+  transition: background-color 0.12s ease;
+}
+
+.move:hover {
+  background-color: #3a3a3a;
+}
+
+.move.active {
+  background-color: #4e7c4e;
+  color: #ffffff;
+}
+
+.whiteMove {
+  color: #eeeeee;
+}
+
+.blackMove {
+  color: #aaaaaa;
+}
+
+#pgnArea {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#pgnArea.hidden {
+  display: none;
+}
+
+#pgnInput {
+  width: 100%;
+  font-family: monospace;
+  font-size: 0.78rem;
+  resize: none;
+  background-color: #262626;
+  color: #e0e0e0;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 6px 8px;
+  outline: none;
+}
+
+#pgnInput:focus {
+  border-color: #555;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#moveDisplay {
+  flex: 1;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+button {
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #3e3e3e;
+  border-color: #666;
+}
+
+button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+#prevBtn,
+#nextBtn {
+  font-size: 1.5rem;
+  padding: 2px 12px;
+  line-height: 1;
+}
+
+#loadBtn {
+  width: 100%;
+}
+
+#chartSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chartLabel {
+  font-size: 0.78rem;
+  color: #666;
+}
+
+#lineChartCanvas {
+  display: block;
+  border-radius: 6px;
+  width: 100%;
+}

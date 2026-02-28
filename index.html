@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chess Analysis</title>
+
+  <link rel="stylesheet" href="./libs/chessground/chessground.base.css">
+  <link rel="stylesheet" href="./libs/chessground/chessground.brown.css">
+  <link rel="stylesheet" href="./libs/chessground/chessground.cburnett.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="app">
+    <div id="analysisLayout">
+      <div id="boardColumn">
+        <div id="blackName">Black</div>
+        <div id="boardRow">
+          <canvas id="evalBarCanvas" width="28" height="400"></canvas>
+          <div id="board"></div>
+        </div>
+        <div id="whiteName">White</div>
+      </div>
+      <div id="sidePanel">
+        <div id="moveList"></div>
+        <div id="pgnArea">
+          <textarea id="pgnInput" placeholder="Paste PGN here" rows="5"></textarea>
+          <button id="loadBtn">Load PGN</button>
+        </div>
+        <div id="controls">
+          <button id="prevBtn" disabled>&#8249;</button>
+          <span id="moveDisplay">Move 0 of 0</span>
+          <button id="nextBtn" disabled>&#8250;</button>
+          <button id="resetBtn" disabled>Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="chartSection">
+      <span class="chartLabel">Evaluation Over Time</span>
+      <canvas id="lineChartCanvas" height="100"></canvas>
+    </div>
+
+  </div>
+
+  <script src="./libs/chess.js"></script>
+  <script src="./libs/jquery-3.7.1.min.js"></script>
+  <script src="./libs/chessground/chessground.umd.min.js"></script>
+  <script src="./graph.js"></script>
+  <script src="./board.js"></script>
+
+</body>
+</html>
